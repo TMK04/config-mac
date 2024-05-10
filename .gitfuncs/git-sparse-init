@@ -1,0 +1,3 @@
+git init
+git sparse-checkout init
+git remote add origin "$1"

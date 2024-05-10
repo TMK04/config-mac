@@ -1,0 +1,42 @@
+[alias]
+	ad = add .
+	addd = add .
+	can = commit --amend --no-edit
+	cm = commit
+	cminit = commit -m \"Initial commit\"
+	cmm = commit -m
+	difs = diff --staged
+	logp = log --oneline --decorate --graph
+	ra = rebase --abort
+	rc = rebase --continue
+	rcn = -c core.editor=true rebase --continue
+	ri = rebase -i
+	s = stash
+	save = "!git stash store -m \"save: $1\" $(git stash create) #"
+	sp = stash pop
+	tagcm = rev-list -n 1
+[core]
+	editor = code --wait
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[init]
+	defaultBranch = main
+
+[commit]
+	gpgsign = true
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+
+[credential]
+	helper = 1password
+[includeIf "gitdir:~/.vscode/extensions/"]
+	path = ~/Projects/tmk04/.gitconfig
+[includeIf "gitdir:~/Projects/tmk04/"]
+	path = ~/Projects/tmk04/.gitconfig
+[includeIf "gitdir:~/Projects/klaytn/"]
+	path = ~/Projects/klaytn/.gitconfig
