@@ -1,0 +1,32 @@
+{
+  "files.exclude": {
+    "**/.git": true,
+    ".aws/": true,
+    ".cache/": true,
+    ".cargo/": true,
+    ".conda": true,
+    ".cups": true,
+    ".dlv": true,
+    ".docker": true,
+    ".gnupg": true,
+    ".npm": true,
+    ".nvmnsource": true,
+    ".pnpm-state": true,
+    ".pnpm-store": true,
+    ".redisinsight-app": true,
+    ".rustup": true,
+    ".swiftpm": true,
+    ".Trash": true,
+    "Applications": true,
+    "Creative Cloud Files": true,
+    "Desktop": true,
+    "Documents": true,
+    "Downloads": true,
+    "iCloud Drive (Archive)": true,
+    "Movies": true,
+    "Music": true,
+    "Pictures": true,
+    "Public": true,
+    "remnote": true
+  }
+}
