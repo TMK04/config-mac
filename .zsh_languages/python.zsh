@@ -10,7 +10,6 @@ load_conda() {
   # >>> conda initialize >>>
   # !! Contents within this block are managed by 'conda init' !!
   __conda_setup="$(eval '$HOME/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-  echo $__conda_setup
   if [ $? -eq 0 ]; then
       eval "$__conda_setup"
   else
