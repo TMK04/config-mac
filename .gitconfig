@@ -15,6 +15,7 @@
 	save = "!git stash store -m \"save: $1\" $(git stash create) #"
 	sp = stash pop
 	tagcm = rev-list -n 1
+	st = status -s
 [core]
 	editor = code --wait
 [filter "lfs"]

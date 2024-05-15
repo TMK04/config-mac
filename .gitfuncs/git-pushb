@@ -1,0 +1,1 @@
+git push -u ${1:-origin} $(git branch --show-current)
