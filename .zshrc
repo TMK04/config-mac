@@ -43,12 +43,7 @@ source ~/.zsh_languages/nodejs.zsh
 source ~/.zsh_languages/python.zsh
 source ~/.zsh_languages/rust.zsh
 
-TRAPEXIT() {
-  # commands to run here, e.g. if you 
-  # always want to run .zlogout:
-  if [[ ! -o login ]]; then
-    # don't do this in a login shell
-    # because it happens anyway
-    . ~/.zlogout
-  fi
-}
+# Aliases
+for _alias in ~/.zalias/*.zsh; do
+  source $_alias
+done

@@ -1,1 +1,0 @@
-nvm deactivate --silent
