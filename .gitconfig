@@ -11,11 +11,12 @@
 	rc = rebase --continue
 	rcn = -c core.editor=true rebase --continue
 	ri = rebase -i
+	root = rev-parse --show-toplevel
 	s = stash
 	save = "!git stash store -m \"save: $1\" $(git stash create) #"
 	sp = stash pop
-	tagcm = rev-list -n 1
 	st = status -s
+	tagcm = rev-list -n 1
 [core]
 	editor = code --wait
 [filter "lfs"]
