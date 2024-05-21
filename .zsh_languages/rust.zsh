@@ -1,5 +1,5 @@
 # Add any commands which depend on go here
-lazy_rust_aliases=('cargo', 'rustc', 'rustup')
+lazy_rust_aliases=('cargo' 'rustc' 'rustup')
 
 load_rust() {
   for lazy_rust_alias in $lazy_rust_aliases
