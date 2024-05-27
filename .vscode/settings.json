@@ -28,5 +28,8 @@
     "Pictures": true,
     "Public": true,
     "remnote": true
+  },
+  "files.associations": {
+    "**/.*funcs/*": "shellscript"
   }
 }
