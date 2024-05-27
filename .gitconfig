@@ -5,12 +5,18 @@
 	cm = commit
 	cminit = commit -m \"Initial commit\"
 	cmm = commit -m
+	cp = cherry-pick
+	cpa = cherry-pick --abort
+	cpc = cherry-pick --continue
+	cps = cherry-pick --skip
+	dif = diff
 	difs = diff --staged
 	logp = log --oneline --decorate --graph
 	ra = rebase --abort
 	rc = rebase --continue
 	rcn = -c core.editor=true rebase --continue
 	ri = rebase -i
+	rs = rebase --skip
 	root = rev-parse --show-toplevel
 	s = stash
 	save = "!git stash store -m \"save: $1\" $(git stash create) #"
@@ -42,3 +48,5 @@
 	path = ~/Projects/tmk04/.gitconfig
 [includeIf "gitdir:~/Projects/klaytn/"]
 	path = ~/Projects/klaytn/.gitconfig
+[rerere]
+	enabled = true
