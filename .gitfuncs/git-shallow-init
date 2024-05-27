@@ -1,3 +1,47 @@
-git remote add origin "$1"
-git fetch --depth 1 origin "${2:-main}"
-git checkout FETCH_HEAD
+#!/bin/zsh
+
+usage() {
+  echo "Usage: git shallow-init
+  -o origin
+  -b branch
+  -d dir
+
+Example: git shallow-init -o https://github.com/user/repo.git -b main -d /path/to/dir"
+
+  exit 1
+}
+
+zparseopts -D -E -- \
+  o:=origin_opt b:=branch_opt d:=dir_opt
+
+origin_arg="${origin_opt[2]}"
+branch_arg="${branch_opt[2]}"
+dir_arg="${dir_opt[2]}"
+
+# Fail if no origin
+if [[ -z "${origin_arg}" ]]; then
+  echo "Error: origin is required"
+  usage
+fi
+
+# Default dir
+if [[ -z "${dir_arg}" ]]; then
+  dir_arg="$(basename ${origin_arg} .git)"
+fi
+
+# Init
+mkdir -p "$dir_arg"
+git -C "$dir_arg" init
+git -C "$dir_arg" remote add origin "$origin_arg"
+
+trap 'usage' ERR
+
+# Default branch
+if [[ -z "${branch_arg}" ]]; then
+  branch_arg="$(git -C "$dir_arg" ls-remote --symref "$origin_arg" HEAD | sed -n 's@^ref: refs/heads/\(.*\)\tHEAD$@\1@p')"
+fi
+
+git -C "$dir_arg" fetch --depth 1 origin "$branch_arg"
+git -C "$dir_arg" checkout "$branch_arg"
+
+echo "Shallow-initialized $origin_arg/$branch_arg in $dir_arg"
