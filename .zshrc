@@ -45,6 +45,4 @@ source ~/.zsh_languages/python.zsh
 source ~/.zsh_languages/rust.zsh
 
 # Aliases
-for _alias in ~/.zalias/*.zsh; do
-  source $_alias
-done
+source ~/.zalias/ngrok.zsh
