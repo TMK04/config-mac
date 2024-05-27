@@ -11,3 +11,5 @@ git clone "https://github.com/ethrgeist/git-credential-1password" "$HOME/.git-cr
 rm -rf "$HOME/.git-credential-1password"
 
 chmod -R 755 "$HOME/.gitfuncs"
+chmod -R 755 "$HOME/.zalias"
+chmod -R 755 "$HOME/.zfuncs"
