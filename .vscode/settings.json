@@ -31,5 +31,11 @@
   },
   "files.associations": {
     "**/.*funcs/*": "shellscript"
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/*.code-search": true,
+    "**/miniconda3": true
   }
 }
