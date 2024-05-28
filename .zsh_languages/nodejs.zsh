@@ -7,8 +7,7 @@ load_nodejs() {
     unalias $lazy_nodejs_alias
   done
 
-  export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+  source ~/.zalias/nvm.zsh
 
   unfunction load_nodejs
 }
