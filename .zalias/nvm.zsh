@@ -1,7 +1,7 @@
 npm_set_cache() {
   local node_version npm_cache_dir
   node_version="$(nvm current)"
-  npm_cache_dir="~/.cache/npm/$node_version"
+  npm_cache_dir="$HOME/.cache/npm/$node_version"
   if [ ! -d "$npm_cache_dir" ]; then
     mkdir -p "$npm_cache_dir"
   fi

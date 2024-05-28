@@ -7,7 +7,7 @@ load_nodejs() {
     unalias $lazy_nodejs_alias
   done
 
-  source ~/.zalias/nvm.zsh
+  source "$HOME/.zalias/nvm.zsh"
 
   unfunction load_nodejs
 }

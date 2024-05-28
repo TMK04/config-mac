@@ -1,20 +1,20 @@
-export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
-source ~/.config/op/plugins.sh
+export SSH_AUTH_SOCK="$HOME/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+source "$HOME/.config/op/plugins.sh"
 export PATH="$HOME/.gitfuncs/:$PATH"
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-# Build ~/.zsh_plugins.zsh from ~/.zsh_plugins.txt unless the former is newer.
-if [[ ! ~/.zsh_plugins.zsh -nt ~/.zsh_plugins.txt ]]; then
-  # Build ~/.zsh_plugins.txt in a subshell.
+# Build $HOME/.zsh_plugins.zsh from $HOME/.zsh_plugins.txt unless the former is newer.
+if [[ ! "$HOME/.zsh_plugins.zsh" -nt "$HOME/.zsh_plugins.txt" ]]; then
+  # Build $HOME/.zsh_plugins.txt in a subshell.
   (
-    source ~/.antidote/antidote.zsh
-    antidote bundle <~/.zsh_plugins.txt >~/.zsh_plugins.zsh
+    source $HOME/.antidote/antidote.zsh
+    antidote bundle <"$HOME/.zsh_plugins.txt" >"$HOME/.zsh_plugins.zsh"
   )
 fi
 
 # Custom functions
-fpath=(~/.zfuncs $fpath);
+fpath=("$HOME/.zfuncs" $fpath);
 autoload -U $fpath[1]/*(.:t)
 
 # Activate Powerlevel10k Instant Prompt.
@@ -25,24 +25,24 @@ fi
 # Enable the "new" completion system (compsys).
 autoload -Uz compinit
 compinit
-if [[ ! ~/.zcompdump.zwc -nt ~/.zcompdump ]]; then
-  zcompile -R -- ~/.zcompdump.zwc ~/.zcompdump
+if [[ ! "$HOME/.zcompdump.zwc" -nt "$HOME/.zcompdump" ]]; then
+  zcompile -R -- "$HOME/.zcompdump.zwc" "$HOME/.zcompdump"
 fi
 # Other autocomplete
-source ~/.zcomp.zsh
+source "$HOME/.zcomp.zsh"
 
 ZSH_AUTOSUGGEST_MANUAL_REBIND=1
 
 # Load plugins.
-source ~/.zoxide.zsh
-source ~/.zsh_plugins.zsh
-source ~/.p10k.zsh
+source "$HOME/.zoxide.zsh"
+source "$HOME/.zsh_plugins.zsh"
+source "$HOME/.p10k.zsh"
 
 # Lazy-load languages
-source ~/.zsh_languages/golang.zsh
-source ~/.zsh_languages/nodejs.zsh
-source ~/.zsh_languages/python.zsh
-source ~/.zsh_languages/rust.zsh
+source "$HOME/.zsh_languages/golang.zsh"
+source "$HOME/.zsh_languages/nodejs.zsh"
+source "$HOME/.zsh_languages/python.zsh"
+source "$HOME/.zsh_languages/rust.zsh"
 
 # Aliases
-source ~/.zalias/ngrok.zsh
+source "$HOME/.zalias/ngrok.zsh"
