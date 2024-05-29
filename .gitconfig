@@ -5,6 +5,7 @@
 	cm = commit
 	cminit = commit -m \"Initial commit\"
 	cmm = commit -m
+	conflicts = "!git diff --check | grep conflict | more"
 	cp = cherry-pick
 	cpa = cherry-pick --abort
 	cpc = cherry-pick --continue
@@ -48,5 +49,3 @@
 	path = ~/Projects/tmk04/.gitconfig
 [includeIf "gitdir:~/Projects/klaytn/"]
 	path = ~/Projects/klaytn/.gitconfig
-[rerere]
-	enabled = true
