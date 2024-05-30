@@ -15,6 +15,7 @@
 	logp = log --oneline --decorate --graph
 	ra = rebase --abort
 	rc = rebase --continue
+	rd = reset .
 	rcn = -c core.editor=true rebase --continue
 	ri = rebase -i
 	rs = rebase --skip
