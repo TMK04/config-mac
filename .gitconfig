@@ -1,6 +1,6 @@
 [alias]
-	ad = add .
-	addd = add .
+	ad = "!git add .; git status -s"
+	addd = "!git add .; git status -s"
 	can = commit --amend --no-edit
 	cm = commit
 	cminit = commit -m \"Initial commit\"
