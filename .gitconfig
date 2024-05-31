@@ -22,6 +22,7 @@
 	root = rev-parse --show-toplevel
 	s = stash
 	save = "!git stash store -m \"save: $1\" $(git stash create) #"
+	sl = stash list
 	sp = stash pop
 	st = status -s
 	tagcm = rev-list -n 1
