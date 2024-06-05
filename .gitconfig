@@ -13,6 +13,7 @@
 	dif = diff
 	difs = diff --staged
 	logp = log --oneline --decorate --graph
+	pushf = push --force-with-lease
 	ra = rebase --abort
 	rc = rebase --continue
 	rd = reset .
