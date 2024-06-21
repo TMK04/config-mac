@@ -3,6 +3,7 @@
 	addd = "!git add .; git status -s"
 	can = commit --amend --no-edit
 	cm = commit
+	cma = commit --amend
 	cminit = commit -m \"Initial commit\"
 	cmm = commit -m
 	conflicts = "!git diff --check | grep conflict | more"
@@ -16,12 +17,13 @@
 	pushf = push --force-with-lease
 	ra = rebase --abort
 	rc = rebase --continue
-	rd = reset .
 	rcn = -c core.editor=true rebase --continue
+	rd = reset .
 	ri = rebase -i
-	rs = rebase --skip
 	root = rev-parse --show-toplevel
+	rs = rebase --skip
 	s = stash
+	sa = stash apply
 	save = "!git stash store -m \"save: $1\" $(git stash create) #"
 	sl = stash list
 	sp = stash pop
