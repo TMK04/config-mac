@@ -43,6 +43,7 @@ source "$HOME/.zsh_languages/golang.zsh"
 source "$HOME/.zsh_languages/nodejs.zsh"
 source "$HOME/.zsh_languages/python.zsh"
 source "$HOME/.zsh_languages/rust.zsh"
+source "$HOME/.zsh_languages/solidity.zsh"
 
 # Aliases
 source "$HOME/.zalias/ngrok.zsh"
