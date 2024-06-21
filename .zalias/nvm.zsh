@@ -9,7 +9,7 @@ npm_set_cache() {
 }
 
 nvm_and_cache() {
-  nvm "$@"
+  nvm ${=@}
   case "$1" in
     use)
       npm_set_cache

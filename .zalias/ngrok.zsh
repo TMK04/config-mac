@@ -28,7 +28,7 @@ ngrok_and_copy() {
     { sleep 2; ngrok_copy; } &
   fi
 
-  ngrok "$@"
+  ngrok ${=@}
 }
 
 alias ngrok="ngrok_and_copy"
