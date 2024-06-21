@@ -6,7 +6,7 @@
 	cma = commit --amend
 	cminit = commit -m \"Initial commit\"
 	cmm = commit -m
-	conflicts = "!git diff --check | grep conflict | more"
+	conflicts = "!git diff --check --staged | grep conflict | more"
 	cp = cherry-pick
 	cpa = cherry-pick --abort
 	cpc = cherry-pick --continue
