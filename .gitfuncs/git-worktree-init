@@ -1,0 +1,35 @@
+#!/bin/zsh
+
+usage() {
+  echo "Usage: git worktree-init
+  -o origin
+  -d dir
+
+Example: git worktree-init -o https://github.com/user/repo.git -d /path/to/dir"
+
+  exit 1
+}
+
+zparseopts -D -E -- \
+  o:=origin_opt d:=dir_opt
+
+origin_arg="${origin_opt[2]}"
+dir_arg="${dir_opt[2]}"
+
+# Fail if no origin
+if [[ -z "${origin_arg}" ]]; then
+  echo "Error: origin is required"
+  usage
+fi
+
+# Default dir
+if [[ -z "${dir_arg}" ]]; then
+  dir_arg="$(basename ${origin_arg} .git)"
+fi
+
+# Init
+mkdir -p "$dir_arg"
+git -C "$dir_arg" clone --bare "$origin_arg" .bare
+echo "gitdir: ./.bare" > "$dir_arg/.git"
+
+echo "worktree-initialized $origin_arg in $dir_arg"
