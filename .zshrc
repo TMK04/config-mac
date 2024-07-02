@@ -51,4 +51,5 @@ source "$HOME/.zsh_languages/rust.zsh"
 source "$HOME/.zsh_languages/solidity.zsh"
 
 # Aliases
+source "$HOME/.zalias/g.zsh"
 source "$HOME/.zalias/ngrok.zsh"
