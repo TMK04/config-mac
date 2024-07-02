@@ -4,11 +4,6 @@ export PATH="$HOME/.gitfuncs/:$PATH"
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-# Start the tmux session if not alraedy in the tmux session
-if [[ -z $TMUX  ]]; then
-  source "$HOME/.zfuncs/tmuxs"
-fi
-
 # Build $HOME/.zsh_plugins.zsh from $HOME/.zsh_plugins.txt unless the former is newer.
 if [[ ! "$HOME/.zsh_plugins.zsh" -nt "$HOME/.zsh_plugins.txt" ]]; then
   # Build $HOME/.zsh_plugins.txt in a subshell.
