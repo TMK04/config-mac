@@ -31,5 +31,6 @@ fi
 mkdir -p "$dir_arg"
 git -C "$dir_arg" clone --bare "$origin_arg" .bare
 echo "gitdir: ./.bare" > "$dir_arg/.git"
+mkdir -p "$dir_arg/.bare.worktrees"
 
 echo "worktree-initialized $origin_arg in $dir_arg"
