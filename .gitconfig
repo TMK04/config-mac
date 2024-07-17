@@ -29,6 +29,7 @@
 	sp = stash pop
 	st = status -s
 	tagcm = rev-list -n 1
+	wt = worktree
 [core]
 	editor = code --wait
 [filter "lfs"]
