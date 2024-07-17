@@ -39,6 +39,7 @@ source "$HOME/.zsh_plugins.zsh"
 source "$HOME/.p10k.zsh"
 
 # Lazy-load languages
+source "$HOME/.zsh_languages/java.zsh"
 source "$HOME/.zsh_languages/golang.zsh"
 source "$HOME/.zsh_languages/nodejs.zsh"
 source "$HOME/.zsh_languages/python.zsh"
