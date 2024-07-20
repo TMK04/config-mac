@@ -46,5 +46,6 @@ source "$HOME/.zsh_plugins.zsh"
 source "$HOME/.p10k.zsh"
 
 # Aliases
-source "$HOME/.zalias/g.zsh"
-source "$HOME/.zalias/ngrok.zsh"
+for alias_path in $HOME/.zalias/*.zsh; do
+  source $alias_path
+done
