@@ -33,11 +33,6 @@ source "$HOME/.zcomp.zsh"
 
 ZSH_AUTOSUGGEST_MANUAL_REBIND=1
 
-# Load plugins.
-source "$HOME/.zoxide.zsh"
-source "$HOME/.zsh_plugins.zsh"
-source "$HOME/.p10k.zsh"
-
 # Lazy-load languages
 source "$HOME/.zsh_languages/java.zsh"
 source "$HOME/.zsh_languages/golang.zsh"
@@ -45,6 +40,11 @@ source "$HOME/.zsh_languages/nodejs.zsh"
 source "$HOME/.zsh_languages/python.zsh"
 source "$HOME/.zsh_languages/rust.zsh"
 source "$HOME/.zsh_languages/solidity.zsh"
+
+# Load plugins
+source "$HOME/.zoxide.zsh"
+source "$HOME/.zsh_plugins.zsh"
+source "$HOME/.p10k.zsh"
 
 # Aliases
 source "$HOME/.zalias/g.zsh"
