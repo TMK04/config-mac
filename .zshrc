@@ -42,7 +42,6 @@ source "$HOME/.zsh_languages/rust.zsh"
 source "$HOME/.zsh_languages/solidity.zsh"
 
 # Load plugins
-source "$HOME/.zoxide.zsh"
 source "$HOME/.zsh_plugins.zsh"
 source "$HOME/.p10k.zsh"
 
