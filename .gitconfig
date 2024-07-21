@@ -13,7 +13,8 @@
 	cps = cherry-pick --skip
 	dif = diff
 	difs = diff --staged
-	logp = log --oneline --decorate --graph
+	l = log --oneline --decorate --graph
+	ll = log
 	pushf = push --force-with-lease
 	ra = rebase --abort
 	rc = rebase --continue
