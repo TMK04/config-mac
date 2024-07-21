@@ -22,6 +22,7 @@
 	rbe = rebase --edit-todo
 	rbi = rebase -i
 	rbs = rebase --skip
+	r = reset
 	rd = reset .
 	root = rev-parse --show-toplevel
 	s = stash
