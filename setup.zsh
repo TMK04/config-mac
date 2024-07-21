@@ -3,6 +3,7 @@ cp "${ZDOTDIR:-$HOME}/.ssh/local-config.example" "${ZDOTDIR:-$HOME}/.ssh/local-c
 brew bundle install
 
 git clone --depth=1 "https://github.com/mattmc3/antidote.git" ${ZDOTDIR:-$HOME}/.antidote
+git clone --depth=1 "https://github.com/Aloxaf/fzf-tab" ${ZDOTDIR:-$HOME}/.fzf-tab
 git clone --depth=1 "https://github.com/go-nv/goenv" "${ZDOTDIR:-$HOME}/.goenv"
 git clone --depth=1 "https://github.com/nvm-sh/nvm" "${ZDOTDIR:-$HOME}/.nvm"
 
