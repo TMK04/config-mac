@@ -1,0 +1,1 @@
+alias zf-r="zf '/' -I"
