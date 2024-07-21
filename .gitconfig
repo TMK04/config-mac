@@ -16,13 +16,14 @@
 	l = log --oneline --decorate --graph
 	ll = log
 	pushf = push --force-with-lease
-	ra = rebase --abort
-	rc = rebase --continue
-	rcn = -c core.editor=true rebase --continue
+	rba = rebase --abort
+	rbc = rebase --continue
+	rbcn = -c core.editor=true rebase --continue
+	rbe = rebase --edit-todo
+	rbi = rebase -i
+	rbs = rebase --skip
 	rd = reset .
-	ri = rebase -i
 	root = rev-parse --show-toplevel
-	rs = rebase --skip
 	s = stash
 	sa = stash apply
 	save = "!git stash store -m \"save: $1\" $(git stash create) #"
