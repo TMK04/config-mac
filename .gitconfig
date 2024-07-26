@@ -16,6 +16,7 @@
 	l = log --oneline --decorate --graph
 	ll = log
 	pushf = push --force-with-lease
+	rb = rebase
 	rba = rebase --abort
 	rbc = rebase --continue
 	rbcn = -c core.editor=true rebase --continue
@@ -33,6 +34,8 @@
 	st = status -s
 	tagcm = rev-list -n 1
 	wt = worktree
+	wtl = worktree list
+	wtroot = "!git worktree list --porcelain | rg '^worktree .*/.bare$' | head -n 1 | sed 's:^worktree ::; s:/.bare$::'"
 [core]
 	editor = code --wait
 [filter "lfs"]
