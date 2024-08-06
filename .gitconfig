@@ -1,12 +1,13 @@
 [alias]
-	ad = "!git add .; git status -s"
-	addd = "!git add .; git status -s"
+	aconflict = "!git add . && git conflict"
+	ad = "!git add . && git status -s"
+	addd = "!git ad"
 	can = commit --amend --no-edit
 	cm = commit
 	cma = commit --amend
 	cminit = commit -m \"Initial commit\"
 	cmm = commit -m
-	conflicts = "!git diff --check --staged | grep conflict | more"
+	conflict = "!git diff --check --staged | grep conflict | more"
 	cp = cherry-pick
 	cpa = cherry-pick --abort
 	cpc = cherry-pick --continue
@@ -15,6 +16,7 @@
 	difs = diff --staged
 	l = log --oneline --decorate --graph
 	ll = log
+	pushb = !git push -u origin "$(git branch --show-current)"
 	pushf = push --force-with-lease
 	rb = rebase
 	rba = rebase --abort
@@ -28,14 +30,14 @@
 	root = rev-parse --show-toplevel
 	s = stash
 	sa = stash apply
-	save = "!git stash store -m \"save: $1\" $(git stash create) #"
+	save = "!git stash store -m \"save: $1\" "$(git stash create)" #"
 	sl = stash list
 	sp = stash pop
 	st = status -s
 	tagcm = rev-list -n 1
 	wt = worktree
 	wtl = worktree list
-	wtroot = "!git worktree list --porcelain | rg '^worktree .*/.bare$' | head -n 1 | sed 's:^worktree ::; s:/.bare$::'"
+	wtroot = "!git wtl --porcelain | rg '^worktree .*/.bare$' | head -n 1 | sed 's:^worktree ::; s:/.bare$::'"
 [core]
 	editor = code --wait
 [filter "lfs"]
