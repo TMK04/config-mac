@@ -1,1 +1,0 @@
-alias l='eza -bGF --header --git'

@@ -1,1 +1,0 @@
-alias zf-p="zf '$HOME/Projects' -I"

@@ -1,1 +1,0 @@
-alias zf-u="zf '$HOME' -I"
