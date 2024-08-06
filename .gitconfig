@@ -63,3 +63,5 @@
 	path = ~/Projects/tmk04/.gitconfig
 [includeIf "gitdir:~/Projects/klaytn/"]
 	path = ~/Projects/klaytn/.gitconfig
+[fetch]
+	writeCommitGraph = true
