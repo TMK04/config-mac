@@ -2,7 +2,8 @@ export SSH_AUTH_SOCK="$HOME/Library/Group\ Containers/2BUA8C4S2C.com.1password/t
 source "$HOME/.config/op/plugins.sh"
 export PATH="$HOME/.gitfuncs/:$PATH"
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
+brew_prefix="/opt/homebrew"
+eval "$("$brew_prefix/bin/brew" shellenv)"
 
 # Build $HOME/.zsh_plugins.zsh from $HOME/.zsh_plugins.txt unless the former is newer.
 if [[ ! "$HOME/.zsh_plugins.zsh" -nt "$HOME/.zsh_plugins.txt" ]]; then
@@ -14,8 +15,10 @@ if [[ ! "$HOME/.zsh_plugins.zsh" -nt "$HOME/.zsh_plugins.txt" ]]; then
 fi
 
 # Custom functions
-fpath=("$HOME/.zfuncs" $fpath);
-autoload -U $fpath[1]/*(.:t)
+zfuncs_path="$HOME/.zfuncs"
+autoload -U $zfuncs_path/*(.:t)
+
+fpath=($zfuncs_path "$brew_prefix/share/zsh/site-functions" $fpath);
 
 # Activate Powerlevel10k Instant Prompt.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
