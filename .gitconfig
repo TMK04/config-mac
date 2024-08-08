@@ -40,6 +40,10 @@
 	wtroot = "!git wtl --porcelain | rg '^worktree .*/.bare$' | head -n 1 | sed 's:^worktree ::; s:/.bare$::'"
 [core]
 	editor = code --wait
+[diff]
+	tool = vscode
+[difftool "vscode"]
+	cmd = code --wait --diff $LOCAL $REMOTE
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
