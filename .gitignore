@@ -6,20 +6,12 @@
 !/.config/1Password/ssh/agent.toml
 !/.config/op/
 !/.config/op/plugins.sh
-!/.gitfuncs/
-!/.gitfuncs/**/*
 !/.ssh/
 !/.ssh/*.pub
 !/.ssh/config
 !/.ssh/local-config.example
 !/.vscode/
 !/.vscode/settings.json
-!/.zfuncs/
-!/.zfuncs/**/*
-!/.zalias/
-!/.zalias/**/*
-!/.zsh_languages/
-!/.zsh_languages/**/*
 !/meta/
 !/meta/**/*
 !/Projects/
@@ -30,12 +22,7 @@
 
 !/.gitconfig
 !/.gitignore
-!/.p10k.zsh
-!/.tmux.conf
-!/.tmux.zsh
-!/.zcomp.zsh
 !/.zlogout
-!/.zoxide.zsh
 !/.zprofile
 !/.zsh_plugins.txt
 !/.zshrc

@@ -1,0 +1,64 @@
+1Password.app
+'Adobe Acrobat DC'
+'Adobe Creative Cloud'
+'Adobe Illustrator 2024'
+'Adobe Media Encoder 2024'
+'Adobe Premiere Pro 2024'
+'Adobe XD'
+AltTab.app
+Arc.app
+ArmGNUToolchain
+AVTouchBar.app
+'AWS VPN Client'
+CurseForge.app
+'DCENT Bridge.app'
+DeepL.app
+DevToys.app
+Discord.app
+Docker.app
+Figma.app
+Firefox.app
+'GitHub Desktop.app'
+'Google Chrome.app'
+'Grammarly Desktop.app'
+iBar.app
+IINA.app
+'IPFS Desktop.app'
+kdenlive.app
+'Ledger Live.app'
+lghub.app
+MediaInfo.app
+'Microsoft Edge.app'
+'Modrinth App.app'
+'MongoDB Compass.app'
+'Moon Modeler.app'
+'Muse Hub.app'
+'MuseScore 4.app'
+Netron.app
+NordVPN.app
+OBS.app
+'Opera GX.app'
+Pika.app
+'PostgreSQL 16'
+QuodLibet.app
+Rectangle.app
+RedisInsight.app
+RemNote.app
+Safari.app -> ../System/Cryptexes/App/System/Applications/Safari.app
+Shottr.app
+Slack.app
+'The Unarchiver.app'
+TinkerTool.app
+Utilities
+'Visual Studio Code.app'
+Wireless@SGx.app
+Xcode.app
+Yippy.app
+'YouTube Music.app'
+zoom.us.app
+'Adobe Application Manager'
+'Adobe Creative Cloud'
+'Adobe Creative Cloud Experience'
+'Adobe Installers'
+'Adobe Sync'
+XQuartz.app
