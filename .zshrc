@@ -1,14 +1,14 @@
 adot="$HOME/."
 ameta="$HOME/meta/"
 
-export SSH_AUTH_SOCK="$HOME/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock"
-source "${adot}config/op/plugins.sh"
-export PATH="${ameta}gitfuncs/:$PATH"
+# export SSH_AUTH_SOCK="$HOME/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+# source "${adot}config/op/plugins.sh"
+export PATH="${adot}local/bin:${ameta}gitfuncs:$PATH"
 
 brew_prefix="/opt/homebrew"
 eval "$("$brew_prefix/bin/brew" shellenv)"
 
-# Build ${ameta}zplugins.zsh from ${ameta}zplugins.txt unless the former is newer.
+# Build ${adot}zplugins.zsh from ${ameta}zplugins.txt unless the former is newer.
 if [[ ! "${adot}zplugins.zsh" -nt "${ameta}zplugins.txt" ]]; then
   # Build ${ameta}zplugins.txt in a subshell.
   (
@@ -21,11 +21,11 @@ fi
 zfuncs_path="${ameta}zfuncs"
 autoload -U $zfuncs_path/*(.:t)
 
-fpath=($zfuncs_path "$brew_prefix/share/zsh/site-functions" $fpath);
+fpath=($zfuncs_path $fpath);
 
 # Activate Powerlevel10k Instant Prompt.
-if [[ -r "${XDG_CACHE_HOME:-${adot}cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-${adot}cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+if [[ -r "${adot}cache/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${adot}cache/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
 # Enable the "new" completion system (compsys).

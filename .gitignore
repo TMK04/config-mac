@@ -30,4 +30,7 @@
 !/Brewfile.lock.json
 !/setup.zsh
 
+!/.goenv
+!/.nvm
+
 .DS_Store

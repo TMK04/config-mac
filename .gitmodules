@@ -1,0 +1,13 @@
+[submodule "goenv"]
+	path = .goenv
+	url = https://github.com/go-nv/goenv
+[submodule "nvm"]
+	path = .nvm
+	url = https://github.com/nvm-sh/nvm
+
+[submodule "antidote"]
+	path = meta/antidote
+	url = https://github.com/mattmc3/antidote
+[submodule "fzf-tab"]
+	path = meta/fzf-tab
+	url = https://github.com/Aloxaf/fzf-tab
